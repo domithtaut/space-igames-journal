@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壹号国际 · 简明访问指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            background-color: #faf7f2;
+            color: #2c2b28;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 2rem 2.8rem;
+            background: #fffcf9;
+            border-radius: 28px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        @media (max-width: 500px) {
+            .page {
+                padding: 1.6rem 1.2rem;
+            }
+        }
+
+        /* 开场短句 —— 用无声引子 */
+        .opener {
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #4a3f35;
+            border-left: 4px solid #bea98a;
+            padding-left: 1.2rem;
+            margin: 1rem 0 1.6rem 0;
+            line-height: 1.5;
+        }
+
+        .opener span {
+            display: block;
+            font-size: 1rem;
+            color: #7c6e5e;
+            margin-top: 0.3rem;
+            font-style: italic;
+            letter-spacing: 0;
+        }
+
+        /* 承接段落——简明路径说明 */
+        .path-note {
+            background: #f5efe9;
+            padding: 1rem 1.6rem;
+            border-radius: 20px;
+            margin: 1.6rem 0;
+            font-size: 1rem;
+            color: #3f392f;
+            border: 1px solid #e6dbcf;
+        }
+
+        .path-note strong {
+            font-weight: 600;
+            color: #2f2a22;
+        }
+
+        /* 特点列表——卡片式，自然告知 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 2rem 0 1.8rem;
+        }
+
+        .feature-card {
+            background: #f7f1ea;
+            padding: 1.2rem 1rem;
+            border-radius: 24px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+            border: 1px solid #ece2d6;
+        }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #4d3f32;
+            margin-bottom: 0.4rem;
+            border-bottom: 1px dashed #dacfc1;
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #4e453b;
+            margin-top: 0.3rem;
+        }
+
+        /* 引用块 / 提示框 */
+        .tip-block {
+            background: #ede7df;
+            padding: 1.4rem 1.6rem;
+            border-radius: 30px 12px 30px 12px;
+            margin: 2rem 0 1.4rem;
+            border-left: 6px solid #b8a58b;
+            font-style: normal;
+        }
+
+        .tip-block p {
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-block .label {
+            font-weight: 600;
+            color: #3d332a;
+            display: inline-block;
+            background: #d9cbbe;
+            padding: 0 0.8rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-mini {
+            background: #faf5ef;
+            padding: 0.8rem 1.2rem;
+            border-radius: 40px 8px 40px 8px;
+            margin: 1.8rem 0;
+            border: 1px solid #e2d5c7;
+        }
+
+        .faq-mini details {
+            margin: 0.6rem 0;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #3d352b;
+            padding: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+
+        .faq-mini details p {
+            margin: 0.5rem 0 0.2rem 1.2rem;
+            color: #5a4f42;
+            font-size: 0.92rem;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            margin-top: 2.4rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e0d4c6;
+            font-size: 0.98rem;
+            color: #4e4237;
+            text-align: center;
+        }
+
+        .closing a {
+            color: #7a674f;
+            text-decoration: none;
+            border-bottom: 1px dotted #b8a58b;
+            padding-bottom: 1px;
+        }
+
+        .closing a:hover {
+            color: #3f2f21;
+            border-bottom: 1px solid #7a674f;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e9ded1;
+            margin: 1.8rem 0 1rem;
+        }
+
+        .footnote {
+            font-size: 0.85rem;
+            color: #857a6d;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- 开场短句 -->
+    <div class="opener">
+        把一件事说清楚。
+        <span>—— 关于访问壹号国际，这里有一份简明指南。</span>
+    </div>
+
+    <!-- 承接段落：从指南角度切入 -->
+    <div class="path-note">
+        <strong>📍 访问之前</strong> —— 你正在寻找一个清晰、直接的入口。网站 <a href="https://webs-yihaoguoji.com" style="color:#5c4d3b; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #c9b9a6;">壹号国际</a> 本身定位就是信息集合，不需要绕弯。以下内容帮你快速了解它的结构。
+    </div>
+
+    <!-- 特点列表 -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>📋 面板式导航</h3>
+            <p>页面顶部功能分区清晰，主要入口和说明并列，初次访问也能立刻找到方向。</p>
+        </div>
+        <div class="feature-card">
+            <h3>📄 文本优先</h3>
+            <p>内容以文字和简洁版块为主，没有复杂动效，适合专注阅读或快速检索。</p>
+        </div>
+        <div class="feature-card">
+            <h3>🔄 多端一致</h3>
+            <p>电脑与手机浏览器均显示良好，响应式布局避免信息错位或按钮过小。</p>
+        </div>
+        <div class="feature-card">
+            <h3>🧭 少跳转</h3>
+            <p>多数说明和链接集中在同一页面内，减少反复加载，浏览节奏更平缓。</p>
+        </div>
+    </div>
+
+    <!-- 引用块 / 提示框：场景与提醒混合 -->
+    <div class="tip-block">
+        <span class="label">📌 使用场景·提醒</span>
+        <p>• 如果你是通过搜索引擎或社群推荐找到这里，建议先花一分钟浏览页面顶部的栏目条——它概括了网站主要模块。</p>
+        <p>• 在手机端横屏模式下，部分导航文字可能会折行，但链接依然可触控，不需要缩放。</p>
+        <p>• 若你希望直接访问核心页面，可使用浏览器书签保存 <a href="https://webs-yihaoguoji.com" style="color:#4d3f32; text-decoration: underline dotted 1px;">壹号国际</a> 的首页，下次即可快速到达。</p>
+    </div>
+
+    <!-- FAQ摘要 (自然嵌入) -->
+    <div class="faq-mini">
+        <details>
+            <summary>❓ 常见简短疑问</summary>
+            <p><strong>Q：</strong> 网站需要注册或登录才能查看内容吗？<br>
+            <strong>A：</strong> 首页及公开信息页无需登录，直接访问即可阅读。</p>
+            <p><strong>Q：</strong> 页面加载较慢怎么办？<br>
+            <strong>A：</strong> 可尝试刷新或更换网络环境；网站本身没有大体积图片，通常轻量加载。</p>
+            <p><strong>Q：</strong> 我想保存某个版块的信息？<br>
+            <strong>A：</strong> 可以直接复制文字，或使用浏览器打印功能另存为 PDF。</p>
+        </details>
+    </div>
+
+    <!-- 温和结尾 + 自然链接 -->
+    <div class="closing">
+        <p>整理一份说明并不复杂，就像访问 <a href="https://webs-yihaoguoji.com">壹号国际</a> 一样，入口就在那里，你打开，便看到了内容。</p>
+        <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #6c5f50;">希望这份简明指南能帮你节省一点摸索的时间。</p>
+    </div>
+
+    <hr>
+
+    <div class="footnote">
+        · 本页仅作介绍 · 内容基于网站公开结构与常见浏览习惯整理 ·
+    </div>
+
+</div>
+
+</body>
+</html>
