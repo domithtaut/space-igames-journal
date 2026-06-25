@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次遇见 · 爱游戏</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f6f9;
+            color: #1e1e2a;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+
+        .hero {
+            background: #0d1117;
+            background-image: radial-gradient(circle at 25% 15%, #232b38 0%, #0b0f15 100%);
+            color: #e4e7ed;
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4f7dbf, transparent);
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .hero .lead {
+            font-size: 1.1rem;
+            max-width: 680px;
+            margin: 0 auto;
+            color: #bac1cf;
+            font-weight: 350;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+
+        /* 承接段落 — 从再次访问视角 */
+        .welcome-note {
+            font-size: 1.05rem;
+            background: #ffffff;
+            padding: 2.2rem 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+            margin-bottom: 3.5rem;
+            border-left: 4px solid #2f5d9c;
+        }
+
+        .welcome-note strong {
+            color: #1f3c63;
+        }
+
+        .welcome-note a {
+            color: #2a5a9a;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #b7cef0;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .welcome-note a:hover {
+            color: #0f2f5c;
+            border-bottom-color: #0f2f5c;
+        }
+
+        .section-label {
+            font-size: 1.4rem;
+            font-weight: 450;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 28px;
+            background: #2a5a9a;
+            border-radius: 8px;
+            margin-right: 14px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(43, 70, 123, 0.08);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 570;
+            margin-bottom: 0.5rem;
+            color: #0f1c32;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #3e4a5c;
+        }
+
+        .scene-block {
+            background: #ebeff5;
+            border-radius: 28px;
+            padding: 2.2rem 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .scene-block p {
+            margin-bottom: 0.8rem;
+        }
+
+        .scene-block .highlight-link {
+            font-weight: 500;
+        }
+
+        .scene-block a {
+            color: #2a5a9a;
+            text-decoration: none;
+            border-bottom: 1px solid #b7cef0;
+            transition: border-color 0.2s;
+        }
+
+        .scene-block a:hover {
+            border-bottom-color: #1a3b6b;
+            color: #1a3b6b;
+        }
+
+        .faq-mini {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.2rem 2.5rem;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.03);
+            margin-bottom: 2.2rem;
+        }
+
+        .faq-mini .q-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1rem;
+        }
+
+        .faq-mini .q-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-mini .question {
+            font-weight: 570;
+            color: #14273e;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-mini .answer {
+            font-size: 0.95rem;
+            color: #455264;
+        }
+
+        .closing-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.8rem 0;
+            border-top: 1px solid #dce3ed;
+            color: #3b4a62;
+        }
+
+        .closing-note a {
+            color: #1e3b64;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #b1c7e6;
+        }
+
+        .closing-note a:hover {
+            border-bottom-color: #0f2a4a;
+            color: #0f2a4a;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero .lead { font-size: 1rem; }
+            .welcome-note, .scene-block, .faq-mini {
+                padding: 1.5rem 1.2rem;
+            }
+            .feature-grid {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>再次抵达 · 爱游戏</h1>
+        <p class="lead">收藏夹里总有一些站点值得反复打开。<br>比起漫无目的地刷新，不如回到真正值得驻足的起点。</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 承接段落：从再次访问、收藏、持续关注展开 -->
+        <div class="welcome-note">
+            <p>把链接收进书签，是数字时代对一片空间的珍视。当你再次打开这个页面，便意味着一次有意识的回归。无论你是因为某个游戏资讯、一篇开发者访谈，还是仅仅想找回那种熟悉的浏览节奏——<strong>这里依然是那个保持了专注与克制的角落</strong>。没有铺天盖地的弹窗，也没有过度包装的推荐；内容在一次次迭代中沉淀，也依然在静静更新。</p>
+            <p style="margin-top: 0.8rem;">如果你忘了当初为何收藏，不妨再花三分钟逛一圈。<a href="https://space-igames.com.cn">爱游戏</a> 始终以平实的方式记录着游戏世界里的逻辑与趣味。重新翻阅，可能会发现上次错过的细节。</p>
+        </div>
+
+        <!-- 特点列表：更偏向于“为什么值得反复回来” -->
+        <div class="section-label">为何持续关注</div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>免于信息过载</h3>
+                <p>内容密度适中，不凑数、不刷屏。每篇更新都经过选择，侧重实际体验与行业脉络。</p>
+            </div>
+            <div class="feature-card">
+                <h3>视角独立克制</h3>
+                <p>不追逐短期热度，不渲染焦虑。从开发思维、设计逻辑到玩家文化，冷静拆解。</p>
+            </div>
+            <div class="feature-card">
+                <h3>常看常新的档案</h3>
+                <p>旧文仍可读，新章不喧哗。许多分析放在半年后依然有效，适合作为长效参考。</p>
+            </div>
+            <div class="feature-card">
+                <h3>没有暗坑或噪音</h3>
+                <p>页面干净，交互诚实。不滥用推送，不强制关注，阅读体验由你掌控。</p>
+            </div>
+        </div>
+
+        <!-- 场景描述：收藏夹里的位置 -->
+        <div class="scene-block">
+            <p><span style="font-weight:530;">你的收藏夹可能已经塞了上百个链接。</span> 但每次清理时，总有一些站点让你犹豫——删掉可惜，留着又很少打开。<strong>爱游戏</strong> 就属于那种值得留在收藏夹深层、且偶尔回来看看的地方。</p>
+            <p>无论是午后想读点有根据的游戏分析，还是需要为某个项目找一点灵感，<a href="https://space-igames.com.cn">爱游戏</a> 提供的不是速食观点，而是带有温度的记录。它不承诺改变你的游戏观念，但总能给你一个安静的阅读角落。</p>
+        </div>
+
+        <!-- FAQ 摘要：温和解答常见犹豫 -->
+        <div class="section-label">你可能在想的</div>
+        <div class="faq-mini">
+            <div class="q-item">
+                <div class="question">「这个网站还会持续更新吗？」</div>
+                <div class="answer">保持着自己的节奏，不一定密集，但每次更新都有明确主题。可以偶尔回来看看，变化会让你察觉。</div>
+            </div>
+            <div class="q-item">
+                <div class="question">「内容会不会太主观？」</div>
+                <div class="answer">作者会表明个人视角，同时提供足够的事实与背景。你完全可以形成自己的判断。</div>
+            </div>
+            <div class="q-item">
+                <div class="question">「需要注册或订阅吗？」</div>
+                <div class="answer">不需要。直接浏览即可，没有任何强制流程。如果你想保持联系，站内提供了最轻量的方式。</div>
+            </div>
+        </div>
+
+        <!-- 温和结尾：收藏即是一种对话 -->
+        <div class="closing-note">
+            <p>把 <a href="https://space-igames.com.cn">爱游戏</a> 放在书签的某个角落，就像在数字世界里留了一盏小灯。不必每天拜访，但你知道它在那里，安静、稳定、依然值得阅读。</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">下次再想起时，它会和上次一样，不吵不闹，只等你翻开。</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
